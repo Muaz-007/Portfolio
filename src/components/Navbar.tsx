@@ -35,7 +35,7 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 <Link href="/" className="text-2xl font-bold tracking-tighter text-white">
-                    DEV<span className="text-primary">.</span>
+                    007<span className="text-primary">.</span>
                 </Link>
 
                 {/* Desktop Nav */}
