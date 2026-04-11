@@ -104,7 +104,7 @@ export default function About() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="p-4 glass rounded-xl"
+                                className="p-4 glass rounded-xl border border-transparent hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,217,255,0.3)] transition-all duration-300"
                             >
                                 <item.icon className="text-primary mb-3" size={24} />
                                 <h4 className="text-white font-semibold mb-1">{item.title}</h4>
@@ -120,7 +120,7 @@ export default function About() {
                         transition={{ delay: 0.5 }}
                         className="mt-12"
                     >
-                        <button className="btn-secondary opacity-50 cursor-not-allowed" disabled>Download Resume</button>
+                        <button className="btn-secondary border border-transparent hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,217,255,0.3)] transition-all duration-300">Download Resume</button>
                     </motion.div>
                 </motion.div>
             </div>

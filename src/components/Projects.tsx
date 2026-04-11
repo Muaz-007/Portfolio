@@ -65,9 +65,6 @@ export default function Projects() {
                                 <p className="text-gray-400 text-sm mb-6 line-clamp-2">{project.description}</p>
 
                                 <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                                    <a href={project.github} className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors">
-                                        <Github size={16} /> CODE
-                                    </a>
                                     <a href={project.demo} className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors">
                                         <ExternalLink size={16} /> LIVE DEMO
                                     </a>

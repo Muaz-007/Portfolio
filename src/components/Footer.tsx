@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
                     <Link href="/" className="text-xl font-bold tracking-tighter text-white">
-                        DEV<span className="text-primary">.</span>
+                        007<span className="text-primary">.</span>
                     </Link>
                     <p className="text-gray-500 text-xs mt-2 uppercase tracking-widest">
                         Crafting the digital future.
