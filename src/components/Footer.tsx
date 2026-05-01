@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -19,15 +19,15 @@ export default function Footer() {
                 </div>
 
                 <div className="flex gap-8">
-                    <Link href="https://github.com/Muaz-007" className="text-gray-500 hover:text-white transition-colors">
+                    <Link href="https://github.com/Muaz-007" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                         <Github size={20} />
                     </Link>
-                    <span className="text-gray-600 cursor-not-allowed" title="LinkedIn (Not available)">
+                    <Link href="https://www.linkedin.com/in/muaz-ali-483279380" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                         <Linkedin size={20} />
-                    </span>
-                    <span className="text-gray-600 cursor-not-allowed" title="Twitter (Not available)">
-                        <Twitter size={20} />
-                    </span>
+                    </Link>
+                    <Link href="https://www.instagram.com/007m_az/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                        <Instagram size={20} />
+                    </Link>
                 </div>
 
                 <div className="text-center md:text-right">

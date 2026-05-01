@@ -1,17 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Lock } from "lucide-react";
 
-const projects = [
+type Project = {
+    id: number;
+    title: string;
+    description: string;
+    tech: string[];
+    demo?: string;
+    image?: string;
+    confidential?: boolean;
+};
+
+const projects: Project[] = [
     {
         id: 1,
         title: "OC-Swim",
         description: "A full-stack Next.js swimming school SaaS platform featuring intelligent scheduling, Stripe integration, and role-based dashboards.",
         tech: ["Next.js", "Stripe", "MySQL", "Tailwind", "JWT"],
-        github: "https://github.com/Muaz-007",
         demo: "https://www.ocswimorganization.com",
         image: "/ocswim.png",
+    },
+    {
+        id: 2,
+        title: "Astra Venture",
+        description: "A polished marketing site for a venture studio, built with React, Vite and TypeScript. Smooth motion design, responsive layouts, and an integrated contact pipeline.",
+        tech: ["React", "TypeScript", "Vite", "Tailwind", "Framer Motion"],
+        demo: "https://astraventures.ai/",
+        image: "/astra.png",
+    },
+    {
+        id: 3,
+        title: "Multi-Channel Communications Portal",
+        description: "An internal SMS & email portal handling Twilio messaging, bulk Mailchimp campaigns, CSV imports, and contact segmentation with role-based access. Confidential client work.",
+        tech: ["Next.js", "TypeScript", "Prisma", "MySQL", "Twilio", "Mailchimp"],
+        confidential: true,
     },
 ];
 
@@ -42,13 +66,24 @@ export default function Projects() {
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                             className="group relative glass rounded-3xl overflow-hidden"
                         >
-                            {/* Image Container */}
-                            <div className="aspect-[16/10] overflow-hidden">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-sm grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
-                                />
+                            {/* Image / Placeholder Container */}
+                            <div className="aspect-[16/10] overflow-hidden relative">
+                                {project.confidential ? (
+                                    <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background-accent to-secondary/20 flex flex-col items-center justify-center gap-3 transition-all duration-700 group-hover:scale-110">
+                                        <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center">
+                                            <Lock className="text-primary" size={28} />
+                                        </div>
+                                        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/80">
+                                            Confidential
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-sm grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
+                                    />
+                                )}
                             </div>
 
                             {/* Overlay Content */}
@@ -65,9 +100,15 @@ export default function Projects() {
                                 <p className="text-gray-400 text-sm mb-6 line-clamp-2">{project.description}</p>
 
                                 <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors">
-                                        <ExternalLink size={16} /> LIVE DEMO
-                                    </a>
+                                    {project.confidential ? (
+                                        <span className="flex items-center gap-2 text-xs font-bold text-gray-500">
+                                            <Lock size={14} /> PRIVATE PROJECT
+                                        </span>
+                                    ) : project.demo ? (
+                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors">
+                                            <ExternalLink size={16} /> LIVE DEMO
+                                        </a>
+                                    ) : null}
                                 </div>
                             </div>
                         </motion.div>

@@ -91,9 +91,13 @@ export default function About() {
                         My journey in tech is driven by a curiosity to solve complex problems through
                         clean code and intuitive design.
                     </p>
-                    <p className="text-gray-400 text-lg mb-12 leading-relaxed">
+                    <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                         Whether it&apos;s architecting a scalable backend or polishing a micro-interaction,
                         I bring a holistic approach to every project I touch.
+                    </p>
+                    <p className="text-gray-400 text-lg mb-12 leading-relaxed">
+                        Currently expanding into mobile with <span className="text-primary">React Native</span>, building
+                        a finance teaching app to put what I&apos;m learning into practice.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -120,7 +124,14 @@ export default function About() {
                         transition={{ delay: 0.5 }}
                         className="mt-12"
                     >
-                        <button className="btn-secondary border border-transparent hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,217,255,0.3)] transition-all duration-300">Download Resume</button>
+                        <a
+                            href="https://drive.google.com/file/d/1lmb8wb2Qg3FN13CBUD9FgierMf9iDwRL/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-secondary hover:shadow-[0_0_15px_rgba(0,217,255,0.3)] transition-all duration-300 inline-block"
+                        >
+                            Download Resume
+                        </a>
                     </motion.div>
                 </motion.div>
             </div>

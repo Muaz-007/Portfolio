@@ -19,9 +19,10 @@ const experiences: ExperienceItem[] = [
         company: "Hive of Solutions",
         period: "present",
         description: [
-            "Architecting and maintaining full-stack applications with Next.js and NestJS, optimizing for high scalability and seamless user experiences.",
-            "Developing complex data-driven dashboards and high-fidelity UIs using Tailwind CSS and TypeScript, following modern design systems.",
-            "Engineering robust RESTful APIs and optimizing relational database schemas with Node.js and PostgreSQL for real-time performance.",
+            "Built and maintained full-stack apps with Next.js, NestJS, and TypeScript.",
+            "Designed data-driven dashboards and polished UIs with Tailwind CSS.",
+            "Engineered REST APIs and PostgreSQL schemas for real-time performance.",
+            "Integrated NextAuth/JWT auth, Stripe, Twilio, and transactional email.",
         ],
         skills: ["Node.js", "Nextjs", "Tailwind", "Nestjs", "TypeScript", "Postgres"],
     },
@@ -31,11 +32,23 @@ const experiences: ExperienceItem[] = [
         company: "Hive of Solutions",
         period: "2024 - 2025",
         description: [
-            "Developed and maintained high-quality client websites using HTML5, CSS3, and modern JavaScript, ensuring pixel-perfect responsiveness.",
-            "Implemented interactive features and dynamic frontend components with Bootstrap and vanilla JS to enhance user engagement.",
-            "Collaborated within Agile teams, participating in sprint planning and technical reviews while managing data with MySQL.",
+            "Shipped production client websites with HTML, CSS, and modern JavaScript.",
+            "Built React + Bootstrap UI components wired to backend APIs.",
+            "Modeled MySQL schemas and contributed to code reviews within Agile sprints.",
         ],
-        skills: ["JavaScript", "HTML", "CSS", "Bootstrap", "MySQL"],
+        skills: ["JavaScript", "React", "HTML", "CSS", "Bootstrap", "MySQL", "REST APIs"],
+    },
+    {
+        id: 4,
+        role: "Freelance Web Developer",
+        company: "Self-Employed",
+        period: "2023 - 2024",
+        description: [
+            "Built responsive websites and landing pages for small businesses.",
+            "Gathered requirements directly from clients and shipped on tight timelines.",
+            "Created reusable HTML, CSS, and JavaScript components for faster delivery.",
+        ],
+        skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "Responsive Design"],
     },
 ];
 

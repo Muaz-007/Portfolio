@@ -5,7 +5,6 @@ import { SkillBadge } from './SkillBadge';
 import {
     Code2,
     Database,
-    Cloud,
     GitBranch,
     Smartphone,
     Layout,
@@ -13,8 +12,11 @@ import {
     Terminal,
     Palette,
     Box,
-    Wrench,
     Zap,
+    FileType2,
+    Sparkles,
+    KeyRound,
+    CreditCard,
 } from 'lucide-react';
 
 const skillCategories = [
@@ -23,10 +25,12 @@ const skillCategories = [
         skills: [
             { name: 'HTML', icon: Code2, level: 'Advanced' as const },
             { name: 'CSS', icon: Palette, level: 'Advanced' as const },
+            { name: 'TypeScript', icon: FileType2, level: 'Advanced' as const },
             { name: 'React', icon: Code2, level: 'Advanced' as const },
             { name: 'Next.js', icon: Layout, level: 'Advanced' as const },
-            { name: 'Bootstrap', icon: Palette, level: 'Advanced' as const },
+            { name: 'React Native', icon: Smartphone, level: 'Beginner' as const },
             { name: 'Tailwind CSS', icon: Palette, level: 'Advanced' as const },
+            { name: 'Framer Motion', icon: Sparkles, level: 'Advanced' as const },
         ],
     },
     {
@@ -34,16 +38,19 @@ const skillCategories = [
         skills: [
             { name: 'Node.js', icon: Server, level: 'Advanced' as const },
             { name: 'NestJS', icon: Zap, level: 'Beginner' as const },
+            { name: 'Prisma', icon: Box, level: 'Advanced' as const },
             { name: 'MySQL', icon: Database, level: 'Advanced' as const },
             { name: 'PostgreSQL', icon: Database, level: 'Advanced' as const },
+            { name: 'NextAuth / JWT', icon: KeyRound, level: 'Intermediate' as const },
         ],
     },
     {
-        category: 'Tools',
+        category: 'Tools & Integrations',
         skills: [
             { name: 'Git', icon: GitBranch, level: 'Advanced' as const },
             { name: 'GitHub', icon: GitBranch, level: 'Advanced' as const },
             { name: 'VS Code', icon: Terminal, level: 'Advanced' as const },
+            { name: 'Stripe', icon: CreditCard, level: 'Intermediate' as const },
         ],
     },
 ];

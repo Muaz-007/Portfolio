@@ -2,12 +2,12 @@
 
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 const socialLinks = [
     { icon: Github, href: "https://github.com/Muaz-007", name: "GitHub", active: true },
-    { icon: Linkedin, href: "#", name: "LinkedIn", active: false },
-    { icon: Twitter, href: "#", name: "Twitter", active: false },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/muaz-ali-483279380", name: "LinkedIn", active: true },
+    { icon: Instagram, href: "https://www.instagram.com/007m_az/", name: "Instagram", active: true },
     { icon: Mail, href: "mailto:muaz.developments@gmail.com", name: "Email", active: true },
 ];
 
@@ -114,10 +114,13 @@ export default function Hero() {
                         );
 
                         if (social.active) {
+                            const isExternal = social.href.startsWith("http");
                             return (
                                 <Link
                                     key={social.name}
                                     href={social.href}
+                                    target={isExternal ? "_blank" : undefined}
+                                    rel={isExternal ? "noopener noreferrer" : undefined}
                                     className="group relative text-gray-400 hover:text-primary transition-colors duration-300"
                                     aria-label={social.name}
                                 >
