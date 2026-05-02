@@ -125,7 +125,7 @@ export default function About() {
                         className="mt-12"
                     >
                         <a
-                            href="https://drive.google.com/file/d/1lmb8wb2Qg3FN13CBUD9FgierMf9iDwRL/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1AgLg6OwFRxzMtrnJCV_pY3bUBQDYZWrA/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-secondary hover:shadow-[0_0_15px_rgba(0,217,255,0.3)] transition-all duration-300 inline-block"
