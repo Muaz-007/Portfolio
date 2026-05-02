@@ -6,7 +6,7 @@ import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 const socialLinks = [
     { icon: Github, href: "https://github.com/Muaz-007", name: "GitHub", active: true },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/muaz-ali-483279380", name: "LinkedIn", active: true },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/muazali007", name: "LinkedIn", active: true },
     { icon: Instagram, href: "https://www.instagram.com/007m_az/", name: "Instagram", active: true },
     { icon: Mail, href: "mailto:muaz.developments@gmail.com", name: "Email", active: true },
 ];

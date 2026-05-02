@@ -22,7 +22,7 @@ export default function Footer() {
                     <Link href="https://github.com/Muaz-007" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                         <Github size={20} />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/muaz-ali-483279380" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                    <Link href="https://www.linkedin.com/in/muazali007" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                         <Linkedin size={20} />
                     </Link>
                     <Link href="https://www.instagram.com/007m_az/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
