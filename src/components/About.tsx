@@ -96,8 +96,8 @@ export default function About() {
                         I bring a holistic approach to every project I touch.
                     </p>
                     <p className="text-gray-400 text-lg mb-12 leading-relaxed">
-                        Currently expanding into mobile with <span className="text-primary">React Native</span>, building
-                        a finance teaching app to put what I&apos;m learning into practice.
+                        Currently expanding into mobile with <span className="text-primary">React Native</span>,
+                        contributing to a finance teaching app to put what I&apos;m learning into practice.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

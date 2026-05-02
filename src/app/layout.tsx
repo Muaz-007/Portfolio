@@ -22,11 +22,20 @@ export const metadata: Metadata = {
     description: siteDescription,
     siteName: "Muaz Ali Portfolio",
     locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 675,
+        alt: "Muaz Ali — Full-Stack Web Developer",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
+    images: ["/og.png"],
   },
 };
 
