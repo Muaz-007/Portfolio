@@ -43,7 +43,16 @@ next-env.d.ts
 # personal files (not part of the deployed portfolio)
 resume.html
 github-profile-README.md
-linkedin-update-guide.md
-linkedin-post-draft.md
-linkedin-post-image.html
-linkedin-next-posts.md
+linkedin-*
+
+# nested project workspaces (separate repos, kept locally for convenience)
+/Saqib 2/
+/saqib-2-extracted/
+/drgcc-connect/
+/OC-Swim-Org/
+
+# zipped archives
+*.zip
+
+# editor / workspace
+*.code-workspace

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Lock } from "lucide-react";
+import { ExternalLink, Github, Lock, Rocket } from "lucide-react";
 
 type Project = {
     id: number;
@@ -9,8 +9,10 @@ type Project = {
     description: string;
     tech: string[];
     demo?: string;
+    code?: string;
     image?: string;
     confidential?: boolean;
+    wip?: boolean;
 };
 
 const projects: Project[] = [
@@ -24,6 +26,15 @@ const projects: Project[] = [
     },
     {
         id: 2,
+        title: "Maison Aurelle",
+        description: "A personal e-commerce SaaS I'm building solo — Next.js, Prisma, and Google Gemini integrated for admin insights, auto-generated product descriptions, and personalized recommendations.",
+        tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Gemini AI", "Tailwind"],
+        image: "/maison.png",
+        code: "https://github.com/Muaz-007/ai-fashion-ecommerce-nextjs",
+        wip: true,
+    },
+    {
+        id: 3,
         title: "Astra Venture",
         description: "A polished marketing site for a venture studio, built with React, Vite and TypeScript. Smooth motion design, responsive layouts, and an integrated contact pipeline.",
         tech: ["React", "TypeScript", "Vite", "Tailwind", "Framer Motion"],
@@ -31,7 +42,7 @@ const projects: Project[] = [
         image: "/astra.png",
     },
     {
-        id: 3,
+        id: 4,
         title: "Multi-Channel Communications Portal",
         description: "An internal SMS & email portal handling Twilio messaging, bulk Mailchimp campaigns, CSV imports, and contact segmentation with role-based access. Confidential client work.",
         tech: ["Next.js", "TypeScript", "Prisma", "MySQL", "Twilio", "Mailchimp"],
@@ -77,13 +88,22 @@ export default function Projects() {
                                             Confidential
                                         </span>
                                     </div>
-                                ) : (
+                                ) : project.image ? (
                                     <img
                                         src={project.image}
                                         alt={project.title}
                                         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:blur-sm grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100"
                                     />
-                                )}
+                                ) : project.wip ? (
+                                    <div className="w-full h-full bg-gradient-to-br from-primary/20 via-background-accent to-secondary/20 flex flex-col items-center justify-center gap-3 transition-all duration-700 group-hover:scale-110">
+                                        <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center">
+                                            <Rocket className="text-primary" size={28} />
+                                        </div>
+                                        <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary/80">
+                                            Personal Project
+                                        </span>
+                                    </div>
+                                ) : null}
                             </div>
 
                             {/* Overlay Content */}
@@ -100,15 +120,26 @@ export default function Projects() {
                                 <p className="text-gray-400 text-sm mb-6 line-clamp-2">{project.description}</p>
 
                                 <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                                    {project.confidential ? (
+                                    {project.confidential && (
                                         <span className="flex items-center gap-2 text-xs font-bold text-gray-500">
                                             <Lock size={14} /> PRIVATE PROJECT
                                         </span>
-                                    ) : project.demo ? (
+                                    )}
+                                    {project.wip && (
+                                        <span className="flex items-center gap-2 text-xs font-bold text-primary/80">
+                                            <Rocket size={14} /> IN DEVELOPMENT
+                                        </span>
+                                    )}
+                                    {project.demo && (
                                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors">
-                                            <ExternalLink size={16} /> LIVE DEMO
+                                            <ExternalLink size={16} /> LIVE
                                         </a>
-                                    ) : null}
+                                    )}
+                                    {project.code && (
+                                        <a href={project.code} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold text-white hover:text-primary transition-colors">
+                                            <Github size={16} /> VIEW CODE
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
